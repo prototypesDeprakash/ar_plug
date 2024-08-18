@@ -1,27 +1,3 @@
-﻿using UnityEditor;
-using UnityEditor.Compilation;
-using UnityEngine;
-
-namespace TriLibCore.Editor
-{
-    public static class TriLibDeprecationWarnings
-    {
-        [InitializeOnLoadMethod]
-        private static void Initialize()
-        {
-            CompilationPipeline.assemblyCompilationFinished -= CompilationPipelineOnassemblyCompilationFinished;
-            CompilationPipeline.assemblyCompilationFinished += CompilationPipelineOnassemblyCompilationFinished;
-        }
-
-        private static void CompilationPipelineOnassemblyCompilationFinished(string arg1, CompilerMessage[] messages)
-        {
-            foreach (var message in messages)
-            {
-                if (message.type == CompilerMessageType.Error && message.message.Contains("'SFB'"))
-                {
-                    Debug.LogWarning("Since TriLib 2.0.12, the 'SFB' namespace has been replaced by the 'TriLibCore.SFB' namespace to avoid conflicts with the vanilla StandaloneFileBrowser.\n\nTo fix errors related to the 'SFB' namespace, replace the 'SFB' namespace from your code with the 'TriLibCore.SFB' namespace.\n\nIf you need any guidance, send a message to 'contato@ricardoreis.net'.");
-                }
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9439b5ed2277aa2f009ffeb1de4bd2d8a2f48f6d717c60a6489119e312e564b3
+size 1259

@@ -1,30 +1,3 @@
-﻿using System.Collections.Generic;
-using TriLibCore.Extensions;
-using TriLibCore.Interfaces;
-using UnityEngine;
-
-namespace TriLibCore.Mappers
-{
-    /// <summary>Represents a Mapper that looks for the Game Object which has only a Transform component and has the biggest number of children as the root bone.</summary>
-    [CreateAssetMenu(menuName = "TriLib/Mappers/Root Bone/By Bones Root Bone Mapper", fileName = "ByBonesRootBoneMapper")]
-    public class ByBonesRootBoneMapper : RootBoneMapper
-    {
-        /// <inheritdoc />
-        public override Transform Map(AssetLoaderContext assetLoaderContext, IList<Transform> bones)
-        {
-            Transform bestBone = null;
-            var bestChildrenCount = 0;
-            for (var i = 0; i < bones.Count; i++)
-            {
-                var bone = bones[i];
-                var childrenCount = bone.CountChild();
-                if (childrenCount >= bestChildrenCount)
-                {
-                    bestChildrenCount = childrenCount;
-                    bestBone = bone;
-                }
-            }
-            return bestBone;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ffe9b8732cb115bce4925e448db3fc023865f6a1b8826260803dbb57a7c35d2
+size 1148

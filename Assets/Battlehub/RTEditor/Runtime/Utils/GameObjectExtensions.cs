@@ -1,32 +1,3 @@
-﻿using UnityEngine;
-
-namespace Battlehub.Utils
-{
-    public static class GameObjectExtensions
-    {
-        public static bool IsPrefab(this GameObject go)
-        {   
-            if(go == null)
-            {
-                return false;
-            }
-
-            if (Application.isEditor && !Application.isPlaying)
-            {
-                #if UNITY_EDITOR
-                UnityEditor.PrefabAssetType assetType = UnityEditor.PrefabUtility.GetPrefabAssetType(go);
-                return assetType == UnityEditor.PrefabAssetType.Regular || assetType == UnityEditor.PrefabAssetType.Model;
-                #else
-                throw new System.InvalidOperationException("Does not work in edit mode");
-                #endif
-            }
-            return go.scene.buildIndex < 0 && go.scene.path == null;
-        }
-
-        public static Bounds CalculateBounds(this GameObject g)
-        {
-            return g.transform.CalculateBounds();
-        }
-    }
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b997b1006cd7f5e88534458ca407516c6c0da4bf2acfbd5723ef8259121f818
+size 1001

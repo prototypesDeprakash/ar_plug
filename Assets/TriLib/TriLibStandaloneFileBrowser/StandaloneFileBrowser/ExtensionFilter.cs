@@ -1,27 +1,3 @@
-﻿namespace TriLibCore.SFB
-{
-    /// <summary>
-    /// Represents a file picker extension filter.
-    /// </summary>
-    public struct ExtensionFilter
-    {
-        /// <summary>
-        /// Filter description.
-        /// </summary>
-        public string Name;
-
-        /// <summary>
-        /// Filter extensions.
-        /// </summary>
-        public string[] Extensions;
-
-        /// <summary>Represents a file picker extension filter.</summary>
-        /// <param name="filterName">The filter description.</param>
-        /// <param name="filterExtensions">The filter extensions.</param>
-        public ExtensionFilter(string filterName, params string[] filterExtensions)
-        {
-            Name = filterName;
-            Extensions = filterExtensions;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:50e9050b0c8327bb1243a45664dc3368938d815b9c079334e58328330193ca39
+size 805

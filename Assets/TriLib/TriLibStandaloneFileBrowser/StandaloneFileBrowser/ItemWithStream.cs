@@ -1,32 +1,3 @@
-﻿using System.IO;
-
-namespace TriLibCore.SFB
-{
-    /// <summary>Represents a platform-specific file with a Stream.</summary>
-    public class ItemWithStream
-    {
-        /// <summary>Gets/Sets the item filename.</summary>
-        public string Name { get; set; }
-
-        /// <summary>Sets the item file Stream.</summary>
-        public Stream Stream { private get; set; }
-
-        /// <summary>
-        /// Indicates if this item has valid data.
-        /// </summary>
-        public bool HasData => !string.IsNullOrWhiteSpace(Name) || Stream != null;
-
-        /// <summary>
-        /// Opens the Stream to read data from this item.
-        /// </summary>
-        /// <returns>The opened Stream.</returns>
-        public Stream OpenStream()
-        {
-            if (Stream == null && Name != null)
-            {
-                return File.OpenRead(Name);
-            }
-            return Stream;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6f43a6b5b523a35e7e2aa22767ad9983cfc371fcc46c67a10a8d1c3239ae3f75
+size 949

@@ -1,15 +1,3 @@
-using UnityEngine;
-
-namespace Battlehub.RTHandles
-{
-    /// <summary>
-    /// Interface to allow rendering "outline" selection in the runtime editor with a different material.
-    /// 
-    /// Material should render the full relevant area in opaque red rgba(1, 0, 0, 1)
-    /// </summary>
-    public interface ICustomOutlinePrepass
-    {
-        Renderer GetRenderer();
-        Material GetOutlinePrepassMaterial();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b537a227e6b28bd88dd9f2beb1d7a73a398486a57d372f8daa491c4f10d0c59f
+size 437

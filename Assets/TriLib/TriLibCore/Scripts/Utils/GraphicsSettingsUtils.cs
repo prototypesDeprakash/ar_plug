@@ -1,19 +1,3 @@
-﻿using UnityEngine.Rendering;
-
-namespace TriLibCore.Utils
-{
-    /// <summary>
-    /// Represents a series of graphic settings utility methods.
-    /// </summary>
-    public static class GraphicsSettingsUtils
-    {
-        /// <summary>Returns <c>true</c> if the project is using the Standard Rendering Pipeline.</summary>
-        public static bool IsUsingStandardPipeline => GraphicsSettings.renderPipelineAsset == null;
-
-        /// <summary>Returns <c>true</c> if the project is using the Universal Rendering Pipeline.</summary>
-        public static bool IsUsingUniversalPipeline => GraphicsSettings.renderPipelineAsset != null && (GraphicsSettings.renderPipelineAsset.name.StartsWith("UniversalRenderPipeline") || GraphicsSettings.renderPipelineAsset.name.StartsWith("UniversalRP"));
-
-        /// <summary>Returns <c>true</c> if the project is using the HDRP Rendering Pipeline.</summary>
-        public static bool IsUsingHDRPPipeline => GraphicsSettings.renderPipelineAsset != null && GraphicsSettings.renderPipelineAsset.name.StartsWith("HD");
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:48b56ecbd55909e3fa0a6361d80bb3248339812d1141a463fd7853a7edc44e0b
+size 1081

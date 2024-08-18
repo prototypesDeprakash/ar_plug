@@ -1,18 +1,3 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
-
-namespace ThisOtherThing.UI.Shapes
-{
-
-	[AddComponentMenu("UI/Shapes/Empty Fill Rect", 200)]
-	public class EmptyFillRect : Graphic
-	{
-		public override void SetMaterialDirty() { return; }
-		public override void SetVerticesDirty() { return; }
-
-		protected override void OnPopulateMesh(VertexHelper vh)
-		{
-			vh.Clear();
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aaa9049ce0ae4c92f5420f84736a587d427da4ff68f568655ec6ffe9eb4edbdc
+size 391

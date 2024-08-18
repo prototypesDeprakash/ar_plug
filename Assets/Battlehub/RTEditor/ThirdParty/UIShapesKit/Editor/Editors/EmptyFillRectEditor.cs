@@ -1,24 +1,3 @@
-﻿using UnityEngine;
-using UnityEditor;
-using UnityEditor.UI;
-
-using EmptyFillRect = ThisOtherThing.UI.Shapes.EmptyFillRect;
-
-[CustomEditor(typeof(EmptyFillRect))]
-[CanEditMultipleObjects]
-public class EmptyFillRectEditor : GraphicEditor
-{
-	protected override void OnEnable()
-	{
-		base.OnEnable();
-	}
-
-	public override void OnInspectorGUI()
-	{
-		serializedObject.Update();
-
-		RaycastControlsGUI();
-
-		serializedObject.ApplyModifiedProperties();
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e9f521c50dd809ce846af4332935294f55e852b70e230fa0e7e7e78db5546e8c
+size 475

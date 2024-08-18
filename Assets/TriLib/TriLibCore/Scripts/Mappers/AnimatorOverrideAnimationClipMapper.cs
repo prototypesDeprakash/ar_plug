@@ -1,29 +1,3 @@
-﻿using UnityEngine;
-
-namespace TriLibCore.Mappers
-{
-    /// <summary>Represents a Mapper used to fill Animator Override Animation Clips.</summary>
-    public class AnimatorOverrideAnimationClipMapper : AnimationClipMapper
-    {
-        /// <summary>
-        /// Animator controller override to use on the animator.
-        /// </summary>
-        public AnimatorOverrideController AnimatorOverrideController;
-
-        ///<inheritdoc />
-        public override AnimationClip[] MapArray(AssetLoaderContext assetLoaderContext, AnimationClip[] sourceAnimationClips)
-        {
-            var animator = assetLoaderContext.RootGameObject.GetComponent<Animator>();
-            if (animator == null || AnimatorOverrideController == null)
-            {
-                if (assetLoaderContext.Options.ShowLoadingWarnings)
-                {
-                    Debug.LogWarning("Tried to execute an AnimatorOverrideController Mapper on a GameObject without an Animator or without setting an AnimatorOverrideController.");
-                }
-                return sourceAnimationClips;
-            }
-            animator.runtimeAnimatorController = AnimatorOverrideController;
-            return sourceAnimationClips;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5184787349f7f80f1e0462d547c716feb12cad085ccb42b96f353400c681da27
+size 1253

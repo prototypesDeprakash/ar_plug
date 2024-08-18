@@ -1,27 +1,3 @@
-﻿using TriLibCore.Playables;
-using UnityEditor;
-using UnityEngine;
-
-namespace TriLibCore.Editor
-{
-    [CustomEditor(typeof(SimpleAnimationPlayer))]
-    public class SimpleAnimationPlayerEditor : UnityEditor.Editor
-    {
-        public override void OnInspectorGUI()
-        {
-            base.OnInspectorGUI();
-            var simpleAnimationPlayer = (SimpleAnimationPlayer) target;
-            if (simpleAnimationPlayer.AnimationClips != null)
-            {
-                for (var i = 0; i < simpleAnimationPlayer.AnimationClips.Count; i++)
-                {
-                    var animationClip = simpleAnimationPlayer.AnimationClips[i];
-                    if (animationClip != null && GUILayout.Button(animationClip.name))
-                    {
-                        simpleAnimationPlayer.PlayAnimation(i);
-                    }
-                }
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a7fa3f06b3ded0e8f317e06b3c62585b1bddbd799db319ec5ac8fa190c340015
+size 917

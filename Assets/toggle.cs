@@ -1,24 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class toggle : MonoBehaviour
-{
-    public GameObject user_camera;
-    public GameObject arcamera;
-    public GameObject ground_temp;
-
-   public void Toggle_cam_mode_ar()
-    {
-        user_camera.SetActive(false);
-        arcamera.SetActive(true);
-        ground_temp.SetActive(false);
-    }
-    public void Toggle_Usercamer()
-    {
-        user_camera.SetActive(true);
-        arcamera.SetActive(false);
-        ground_temp.SetActive(true);
-    }
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:e33142d07859f176ba8ce15f44b88baecd5e4475faea6bc558b0d99cf89bb6a0
+size 562
